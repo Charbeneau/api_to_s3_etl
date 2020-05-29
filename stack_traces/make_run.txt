@@ -1,0 +1,196 @@
+Creating network "airflow_etl_default" with the default driver
+Pulling postgres (postgres:9.6)...
+9.6: Pulling from library/postgres
+b248fa9f6d2a: Pull complete
+8ce5aee1dc0e: Pull complete
+394d743e7eda: Pull complete
+646fad7537c2: Pull complete
+031810e72966: Pull complete
+e921d1a3b212: Pull complete
+35c3fe60701f: Pull complete
+9902aba11c00: Pull complete
+50e2cda133bf: Pull complete
+7e7872d7768a: Pull complete
+2a0a32f77db4: Pull complete
+cc64b7ddf39d: Pull complete
+db910e83d79a: Pull complete
+03cde239cd9d: Pull complete
+Digest: sha256:1d8a05cc79e557c3a33afad06cec282d7c29d4edf7c04e92cf3c20d7acfdd2d2
+Status: Downloaded newer image for postgres:9.6
+Creating airflow_etl_postgres_1 ... done
+Pulling webserver (puckel/docker-airflow:1.10.9)...
+1.10.9: Pulling from puckel/docker-airflow
+bc51dd8edc1b: Pull complete
+dc4aa7361f66: Pull complete
+5f346cb9ea74: Pull complete
+a4f1efa8e0e8: Pull complete
+7e4812fc693b: Pull complete
+ff8fd055a548: Pull complete
+c9215f8e7f2f: Pull complete
+cab2fe472084: Pull complete
+1f03789c1e57: Pull complete
+Digest: sha256:30e7cb9744ad367c54ae30a379fa46c9df4ea582bf2fcb96604adfc2760be79a
+Status: Downloaded newer image for puckel/docker-airflow:1.10.9
+Collecting boto3==1.13.9
+  Downloading boto3-1.13.9-py2.py3-none-any.whl (128 kB)
+     |████████████████████████████████| 128 kB 2.5 MB/s
+Collecting botocore==1.16.9
+  Downloading botocore-1.16.9-py2.py3-none-any.whl (6.2 MB)
+     |████████████████████████████████| 6.2 MB 7.8 MB/s
+Collecting docutils==0.15.2
+  Downloading docutils-0.15.2-py3-none-any.whl (547 kB)
+     |████████████████████████████████| 547 kB 15.2 MB/s
+Collecting jmespath==0.10.0
+  Downloading jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+Requirement already satisfied: python-dateutil==2.8.1 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 6)) (2.8.1)
+Collecting s3transfer==0.3.3
+  Downloading s3transfer-0.3.3-py2.py3-none-any.whl (69 kB)
+     |████████████████████████████████| 69 kB 7.3 MB/s
+Requirement already satisfied: six==1.14.0 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 8)) (1.14.0)
+Collecting urllib3==1.25.9
+  Downloading urllib3-1.25.9-py2.py3-none-any.whl (126 kB)
+     |████████████████████████████████| 126 kB 20.0 MB/s
+Collecting numpy==1.18.4
+  Downloading numpy-1.18.4-cp37-cp37m-manylinux1_x86_64.whl (20.2 MB)
+     |████████████████████████████████| 20.2 MB 11.1 MB/s
+Requirement already satisfied: pandas==0.25.3 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 13)) (0.25.3)
+Collecting pytz==2020.1
+  Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)
+     |████████████████████████████████| 510 kB 10.9 MB/s
+Collecting certifi==2020.4.5.1
+  Downloading certifi-2020.4.5.1-py2.py3-none-any.whl (157 kB)
+     |████████████████████████████████| 157 kB 13.9 MB/s
+Requirement already satisfied: chardet==3.0.4 in /usr/local/lib/python3.7/site-packages (from -r /requirements.txt (line 20)) (3.0.4)
+Collecting idna==2.9
+  Downloading idna-2.9-py2.py3-none-any.whl (58 kB)
+     |████████████████████████████████| 58 kB 9.2 MB/s
+Collecting newsapi-python==0.2.6
+  Downloading newsapi_python-0.2.6-py2.py3-none-any.whl (7.9 kB)
+Collecting requests==2.23.0
+  Downloading requests-2.23.0-py2.py3-none-any.whl (58 kB)
+     |████████████████████████████████| 58 kB 6.3 MB/s
+Installing collected packages: jmespath, docutils, urllib3, botocore, s3transfer, boto3, numpy, pytz, certifi, idna, requests, newsapi-python
+  WARNING: The scripts f2py, f2py3 and f2py3.7 are installed in '/usr/local/airflow/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed boto3-1.13.9 botocore-1.16.9 certifi-2020.4.5.1 docutils-0.15.2 idna-2.9 jmespath-0.10.0 newsapi-python-0.2.6 numpy-1.18.4 pytz-2020.1 requests-2.23.0 s3transfer-0.3.3 urllib3-1.25.9
+WARNING: You are using pip version 20.0.2; however, version 20.1 is available.
+You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
+[2020-05-15 15:49:06,077] {{settings.py:253}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=14
+DB: postgresql+psycopg2://airflow:***@postgres:5432/airflow
+[2020-05-15 15:49:06,554] {{db.py:368}} INFO - Creating tables
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> e3a246e0dc1, current schema
+INFO  [alembic.runtime.migration] Running upgrade e3a246e0dc1 -> 1507a7289a2f, create is_encrypted
+INFO  [alembic.runtime.migration] Running upgrade 1507a7289a2f -> 13eb55f81627, maintain history for compatibility with earlier migrations
+INFO  [alembic.runtime.migration] Running upgrade 13eb55f81627 -> 338e90f54d61, More logging into task_instance
+INFO  [alembic.runtime.migration] Running upgrade 338e90f54d61 -> 52d714495f0, job_id indices
+INFO  [alembic.runtime.migration] Running upgrade 52d714495f0 -> 502898887f84, Adding extra to Log
+INFO  [alembic.runtime.migration] Running upgrade 502898887f84 -> 1b38cef5b76e, add dagrun
+INFO  [alembic.runtime.migration] Running upgrade 1b38cef5b76e -> 2e541a1dcfed, task_duration
+INFO  [alembic.runtime.migration] Running upgrade 2e541a1dcfed -> 40e67319e3a9, dagrun_config
+INFO  [alembic.runtime.migration] Running upgrade 40e67319e3a9 -> 561833c1c74b, add password column to user
+INFO  [alembic.runtime.migration] Running upgrade 561833c1c74b -> 4446e08588, dagrun start end
+INFO  [alembic.runtime.migration] Running upgrade 4446e08588 -> bbc73705a13e, Add notification_sent column to sla_miss
+INFO  [alembic.runtime.migration] Running upgrade bbc73705a13e -> bba5a7cfc896, Add a column to track the encryption state of the 'Extra' field in connection
+INFO  [alembic.runtime.migration] Running upgrade bba5a7cfc896 -> 1968acfc09e3, add is_encrypted column to variable table
+INFO  [alembic.runtime.migration] Running upgrade 1968acfc09e3 -> 2e82aab8ef20, rename user table
+INFO  [alembic.runtime.migration] Running upgrade 2e82aab8ef20 -> 211e584da130, add TI state index
+INFO  [alembic.runtime.migration] Running upgrade 211e584da130 -> 64de9cddf6c9, add task fails journal table
+INFO  [alembic.runtime.migration] Running upgrade 64de9cddf6c9 -> f2ca10b85618, add dag_stats table
+INFO  [alembic.runtime.migration] Running upgrade f2ca10b85618 -> 4addfa1236f1, Add fractional seconds to mysql tables
+INFO  [alembic.runtime.migration] Running upgrade 4addfa1236f1 -> 8504051e801b, xcom dag task indices
+INFO  [alembic.runtime.migration] Running upgrade 8504051e801b -> 5e7d17757c7a, add pid field to TaskInstance
+INFO  [alembic.runtime.migration] Running upgrade 5e7d17757c7a -> 127d2bf2dfa7, Add dag_id/state index on dag_run table
+INFO  [alembic.runtime.migration] Running upgrade 127d2bf2dfa7 -> cc1e65623dc7, add max tries column to task instance
+INFO  [alembic.runtime.migration] Running upgrade cc1e65623dc7 -> bdaa763e6c56, Make xcom value column a large binary
+INFO  [alembic.runtime.migration] Running upgrade bdaa763e6c56 -> 947454bf1dff, add ti job_id index
+INFO  [alembic.runtime.migration] Running upgrade 947454bf1dff -> d2ae31099d61, Increase text size for MySQL (not relevant for other DBs' text types)
+INFO  [alembic.runtime.migration] Running upgrade d2ae31099d61 -> 0e2a74e0fc9f, Add time zone awareness
+INFO  [alembic.runtime.migration] Running upgrade d2ae31099d61 -> 33ae817a1ff4, kubernetes_resource_checkpointing
+INFO  [alembic.runtime.migration] Running upgrade 33ae817a1ff4 -> 27c6a30d7c24, kubernetes_resource_checkpointing
+INFO  [alembic.runtime.migration] Running upgrade 27c6a30d7c24 -> 86770d1215c0, add kubernetes scheduler uniqueness
+INFO  [alembic.runtime.migration] Running upgrade 86770d1215c0, 0e2a74e0fc9f -> 05f30312d566, merge heads
+INFO  [alembic.runtime.migration] Running upgrade 05f30312d566 -> f23433877c24, fix mysql not null constraint
+INFO  [alembic.runtime.migration] Running upgrade f23433877c24 -> 856955da8476, fix sqlite foreign key
+INFO  [alembic.runtime.migration] Running upgrade 856955da8476 -> 9635ae0956e7, index-faskfail
+INFO  [alembic.runtime.migration] Running upgrade 9635ae0956e7 -> dd25f486b8ea, add idx_log_dag
+INFO  [alembic.runtime.migration] Running upgrade dd25f486b8ea -> bf00311e1990, add index to taskinstance
+INFO  [alembic.runtime.migration] Running upgrade 9635ae0956e7 -> 0a2a5b66e19d, add task_reschedule table
+INFO  [alembic.runtime.migration] Running upgrade 0a2a5b66e19d, bf00311e1990 -> 03bc53e68815, merge_heads_2
+INFO  [alembic.runtime.migration] Running upgrade 03bc53e68815 -> 41f5f12752f8, add superuser field
+INFO  [alembic.runtime.migration] Running upgrade 41f5f12752f8 -> c8ffec048a3b, add fields to dag
+INFO  [alembic.runtime.migration] Running upgrade c8ffec048a3b -> dd4ecb8fbee3, Add schedule interval to dag
+INFO  [alembic.runtime.migration] Running upgrade dd4ecb8fbee3 -> 939bb1e647c8, task reschedule fk on cascade delete
+INFO  [alembic.runtime.migration] Running upgrade 939bb1e647c8 -> 6e96a59344a4, Make TaskInstance.pool not nullable
+INFO  [alembic.runtime.migration] Running upgrade 6e96a59344a4 -> d38e04c12aa2, add serialized_dag table
+Revision ID: d38e04c12aa2
+Revises: 6e96a59344a4
+Create Date: 2019-08-01 14:39:35.616417
+INFO  [alembic.runtime.migration] Running upgrade d38e04c12aa2 -> b3b105409875, add root_dag_id to DAG
+Revision ID: b3b105409875
+Revises: d38e04c12aa2
+Create Date: 2019-09-28 23:20:01.744775
+INFO  [alembic.runtime.migration] Running upgrade 6e96a59344a4 -> 74effc47d867, change datetime to datetime2(6) on MSSQL tables
+INFO  [alembic.runtime.migration] Running upgrade 939bb1e647c8 -> 004c1210f153, increase queue name size limit
+INFO  [alembic.runtime.migration] Running upgrade c8ffec048a3b -> a56c9515abdc, Remove dag_stat table
+INFO  [alembic.runtime.migration] Running upgrade a56c9515abdc, 004c1210f153, 74effc47d867, b3b105409875 -> 08364691d074, Merge the four heads back together
+INFO  [alembic.runtime.migration] Running upgrade 08364691d074 -> fe461863935f, increase_length_for_connection_password
+INFO  [alembic.runtime.migration] Running upgrade fe461863935f -> 7939bcff74ba, Add DagTags table
+Done.
+[2020-05-15 15:49:08,781] {{settings.py:253}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20
+[2020-05-15 15:49:08,781] {{settings.py:253}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=1
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2020-05-15 15:49:09,254] {{__init__.py:51}} INFO - Using executor LocalExecutor
+[2020-05-15 15:49:09,260] {{scheduler_job.py:1344}} INFO - Starting the scheduler
+[2020-05-15 15:49:09,260] {{scheduler_job.py:1352}} INFO - Running execute loop for -1 seconds
+[2020-05-15 15:49:09,261] {{scheduler_job.py:1353}} INFO - Processing each file at most -1 times
+[2020-05-15 15:49:09,262] {{scheduler_job.py:1356}} INFO - Searching for files in /usr/local/airflow/dags
+[2020-05-15 15:49:09,322] {{scheduler_job.py:1358}} INFO - There are 3 files in /usr/local/airflow/dags
+[2020-05-15 15:49:09,370] {{__init__.py:51}} INFO - Using executor LocalExecutor
+[2020-05-15 15:49:09,370] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags
+[2020-05-15 15:49:09,514] {{scheduler_job.py:1409}} INFO - Resetting orphaned tasks for active dag runs
+[2020-05-15 15:49:09,541] {{dag_processing.py:556}} INFO - Launched DagFileProcessorManager with pid: 166
+[2020-05-15 15:49:09,552] {{settings.py:54}} INFO - Configured default timezone <Timezone [UTC]>
+[2020-05-15 15:49:09,565] {{settings.py:253}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=166
+Running the Gunicorn Server with:
+Workers: 4 sync
+Host: 0.0.0.0:8080
+Timeout: 120
+Logfiles: - -
+=================================================================
+[2020-05-15 15:49:10,646] {{settings.py:253}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=179
+[2020-05-15 15:49:10 +0000] [179] [INFO] Starting gunicorn 19.10.0
+[2020-05-15 15:49:10 +0000] [179] [INFO] Listening at: http://0.0.0.0:8080 (179)
+[2020-05-15 15:49:10 +0000] [179] [INFO] Using worker: sync
+[2020-05-15 15:49:10 +0000] [194] [INFO] Booting worker with pid: 194
+[2020-05-15 15:49:10 +0000] [195] [INFO] Booting worker with pid: 195
+[2020-05-15 15:49:10 +0000] [196] [INFO] Booting worker with pid: 196
+[2020-05-15 15:49:10 +0000] [200] [INFO] Booting worker with pid: 200
+[2020-05-15 15:49:11,165] {{__init__.py:51}} INFO - Using executor LocalExecutor
+[2020-05-15 15:49:11,166] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags
+[2020-05-15 15:49:11,267] {{__init__.py:51}} INFO - Using executor LocalExecutor
+[2020-05-15 15:49:11,267] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags
+[2020-05-15 15:49:11,481] {{__init__.py:51}} INFO - Using executor LocalExecutor
+[2020-05-15 15:49:11,482] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags
+[2020-05-15 15:49:11,582] {{__init__.py:51}} INFO - Using executor LocalExecutor
+[2020-05-15 15:49:11,582] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags
+[2020-05-15 15:49:29 +0000] [179] [INFO] Handling signal: winch
+[2020-05-15 15:49:29 +0000] [179] [INFO] Handling signal: winch
+[2020-05-15 15:49:30 +0000] [179] [INFO] Handling signal: winch
+[2020-05-15 15:49:30 +0000] [179] [INFO] Handling signal: winch
+[2020-05-15 15:49:42 +0000] [179] [INFO] Handling signal: ttin
+[2020-05-15 15:49:42 +0000] [678] [INFO] Booting worker with pid: 678
+[2020-05-15 15:49:43,396] {{__init__.py:51}} INFO - Using executor LocalExecutor
+[2020-05-15 15:49:43,397] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags
+[2020-05-15 15:49:44 +0000] [179] [INFO] Handling signal: ttou
+[2020-05-15 15:49:44 +0000] [194] [INFO] Worker exiting (pid: 194)
