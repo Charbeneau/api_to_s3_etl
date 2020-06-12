@@ -7,7 +7,7 @@ This is the first thing I've done with [Airflow](https://airflow.apache.org/).
 
 I used the "LocalExecutor" method in [this repo](https://github.com/puckel/docker-airflow) as a starting point.
 
-The [DAG](.src/dags/api_to_s3_etl_dag.py) hits an [API](https://newsapi.org/), transforms the results, and puts them into [S3](https://aws.amazon.com/s3/).
+The [DAG](./src/dags/api_to_s3_etl_dag.py) hits an [API](https://newsapi.org/), transforms the results, and puts them into [S3](https://aws.amazon.com/s3/).
 
 # Requirements
 
