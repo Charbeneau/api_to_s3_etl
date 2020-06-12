@@ -32,20 +32,25 @@ The [DAG](./src/dags/api_to_s3_etl_dag.py) hits an [API](https://newsapi.org/), 
 make docker-clean-unused
 ```
 
-1. Run the tests.
+1. Build the containers.
+```
+make build
+```
+
+2. Run the tests.
 ```
 make test
 ```
 
-2. Run the webserver container.
+3. Start the services.
 ```
-make run
+make up
 ```
 
 You should see something like [this](./stack_traces/make_run.txt).
 
-3. Go to [http://localhost:8080/admin/](http://localhost:8080/admin/).
+4. Go to [http://localhost:8080/admin/](http://localhost:8080/admin/).
 
-4. Turn on the api_to_s3_etl_dag DAG, click on it, and click on "Graph View".
+5. Turn on the api_to_s3_etl_dag DAG, click on it, and click on "Graph View".
 
-5. Click "Trigger DAG" to run it.
+6. Click "Trigger DAG" to run it.
