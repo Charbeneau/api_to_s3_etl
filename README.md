@@ -54,3 +54,8 @@ You should see something like [this](./stack_traces/make_run.txt).
 5. Turn on the api_to_s3_etl_dag DAG, click on it, and click on "Graph View".
 
 6. Click "Trigger DAG" to run it.
+
+7. End the services.
+```
+make down
+```
