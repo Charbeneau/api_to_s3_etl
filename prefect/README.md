@@ -36,14 +36,23 @@ pip install -r prefect_env_requirements.txt
 prefect backend server
 ```
 
-1. Start the server, UI, and all required infrastructure.
+2. Start the server, UI, and all required infrastructure.
 ```
 prefect server start
 ```
 
-2. View the UI by visiting [http://localhost:8080](http://localhost:8080).
+3. View the UI by visiting [http://localhost:8080](http://localhost:8080).
 
 Please note that executing flows from the server requires at least one Prefect Agent to be running.
 ```
 prefect agent start
 ```
+
+4. Go to the UI and create a MapReduce project.
+
+5. Run the following.
+```
+python local_mapreduce.py
+```
+
+6. Go back to the UI, and click Run or something.
