@@ -10,7 +10,7 @@ The [Flow] hits an [API](https://newsapi.org/), transforms the results, and puts
 # Requirements
 
 - Python 3
- - This was written using version 3.7.6 [Clang 10.0.0 (clang-1000.11.45.5)] on darwin
+  - This was written using version 3.7.6 [Clang 10.0.0 (clang-1000.11.45.5)] on darwin
 - [Docker](https://www.docker.com/products/docker-desktop)
   - This was written using version 19.03.5, build 633a0ea.
 - [Docker Compose](https://docs.docker.com/compose/)
@@ -41,18 +41,18 @@ prefect backend server
 prefect server start
 ```
 
-3. View the UI by visiting [http://localhost:8080](http://localhost:8080).
-
-Please note that executing flows from the server requires at least one Prefect Agent to be running.
+3. Open a new terminal, hop in the prefect_env virtual environment, and start the Prefect Agent.
 ```
 prefect agent start
 ```
 
-4. Go to the UI and create a MapReduce project.
+4. View the UI by visiting [http://localhost:8080](http://localhost:8080).
 
-5. Run the following.
+5. In the UI, create a new "MapReduce" project.
+
+6. Again, open a new terminal, enter in the prefect_env virtual environment, and run the following.
 ```
 python local_mapreduce.py
 ```
 
-6. Go back to the UI, and click Run or something.
+7. Go back to the UI, and click "QUICK RUN" in the upper right.
