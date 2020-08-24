@@ -1,6 +1,3 @@
-# api_to_s3_etl
-Let's hit an API, transforms the results, and put them in S3!
-
 # Overview
 
 This is the first thing I've done with [Airflow](https://airflow.apache.org/).

@@ -1,6 +1,3 @@
-# api_to_s3_etl
-Let's hit an API, transforms the results, and put them in S3!
-
 # Overview
 
 This is the first thing I've done with [Prefect](https://www.prefect.io/).
@@ -48,7 +45,7 @@ prefect agent start
 
 4. View the UI by visiting [http://localhost:8080](http://localhost:8080).
 
-5. In the UI, create a new "MapReduce" project.
+5. In the UI, create a new "APItoS3ETL" project.
 
 6. Again, open a new terminal, enter in the prefect_env virtual environment, and run the following.
 ```
