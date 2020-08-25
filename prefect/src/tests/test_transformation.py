@@ -1,4 +1,4 @@
-from flows.utils import transform_headlines_task
+from src.flows.utils import transform_headlines_task
 import pandas as pd
 
 
