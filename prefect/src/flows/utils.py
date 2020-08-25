@@ -5,7 +5,7 @@ import datetime
 from prefect import task
 
 
-@task
+@task(log_stdout=True)
 def get_sources_task(language, news_api):
     '''Gets sources list for specified language.
 
@@ -37,7 +37,7 @@ def get_sources_task(language, news_api):
     return sources_list
 
 
-@task
+@task(log_stdout=True)
 def make_sources_param_task(sources_list):
     '''Get the sources ids from the
     list returned by newsapi.NewsApiClient.get_sources(),
@@ -68,7 +68,7 @@ def make_sources_param_task(sources_list):
     return sources
 
 
-@task
+@task(log_stdout=True)
 def get_top_headlines_task(language, news_api, sources):
     '''Gets top headlines for language,
     using self.sources_param.
@@ -105,7 +105,7 @@ def get_top_headlines_task(language, news_api, sources):
     return top_headlines
 
 
-@task
+@task(log_stdout=True)
 def transform_headlines_task(top_headlines):
     '''Transforms NewsAPI top headlines
     data appropriately.
@@ -137,7 +137,7 @@ def transform_headlines_task(top_headlines):
     return df
 
 
-@task
+@task(log_stdout=True)
 def df_to_s3_task(bucket_name, sources, df):
     '''Put a DataFrame to S3 as a csv.
 

@@ -2,7 +2,7 @@
 
 This is the first thing I've done with [Prefect](https://www.prefect.io/).
 
-The [Flow] hits an [API](https://newsapi.org/), transforms the results, and puts them into [S3](https://aws.amazon.com/s3/).
+The [Flow](./src/flows/api_to_s3_etl_flow.py) hits an [API](https://newsapi.org/), transforms the results, and puts them into [S3](https://aws.amazon.com/s3/).
 
 # Requirements
 
@@ -18,7 +18,7 @@ The [Flow] hits an [API](https://newsapi.org/), transforms the results, and puts
   - AWS_ACCESS_KEY_ID
   - AWS_SECRET_ACCESS_KEY
   - NEWS_API_KEY
-  - S3_BUCKET
+  - API_TO_S3_ETL_BUCKET
 
 ## Usage
 
@@ -49,7 +49,6 @@ prefect agent start
 
 6. Again, open a new terminal, enter in the prefect_env virtual environment, and run the following.
 ```
-cd prefect/
 python src/flows/api_to_s3_etl_flow.py
 ```
 
