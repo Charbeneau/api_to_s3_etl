@@ -45,11 +45,12 @@ prefect agent start
 
 4. View the UI by visiting [http://localhost:8080](http://localhost:8080).
 
-5. In the UI, create a new "APItoS3ETL" project.
+5. In the UI, create a new 'APItoS3ETL' project.
 
 6. Again, open a new terminal, enter in the prefect_env virtual environment, and run the following.
 ```
-python local_mapreduce.py
+cd prefect/
+python src/flows/api_to_s3_etl_flow.py
 ```
 
 7. Go back to the UI, and click "QUICK RUN" in the upper right.

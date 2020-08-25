@@ -17,7 +17,7 @@ LANGUAGE = 'en'
 news_api = NewsApiClient(NEWS_API_KEY)
 
 
-with Flow('APItoS3ETL') as flow:
+with Flow('api_to_s3_etl_flow') as flow:
     sources_list = get_sources_task(language=LANGUAGE, news_api=news_api)
     sources = make_sources_param_task(sources_list=sources_list)
     top_headlines = get_top_headlines_task(language=LANGUAGE, news_api=news_api,
