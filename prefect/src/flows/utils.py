@@ -61,8 +61,6 @@ def make_sources_param_task(sources_list):
                   String of comma-separated sources.
     '''
     print('Creating sources parameter string.')
-    print('sources_list:')
-    print(sources_list)
     sources = ','.join([ele['id'] for ele in sources_list])
 
     return sources

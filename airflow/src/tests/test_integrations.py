@@ -3,11 +3,11 @@ import boto3
 from newsapi import NewsApiClient
 
 
-S3_BUCKET = os.environ.get('S3_BUCKET', None)
+API_TO_S3_ETL_BUCKET = os.environ.get('API_TO_S3_ETL_BUCKET', None)
 NEWS_API_KEY = os.environ.get('NEWS_API_KEY', None)
 
 
-def test_connect_to_bucket(bucket_name=S3_BUCKET):
+def test_connect_to_bucket(bucket_name=API_TO_S3_ETL_BUCKET):
     '''Confirm existance of and connection to the
     S3 bucket in AWS_DEFAULT_REGION.
 

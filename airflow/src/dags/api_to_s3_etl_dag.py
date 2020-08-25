@@ -14,7 +14,7 @@ from datetime import timedelta
 from newsapi import NewsApiClient
 
 
-S3_BUCKET = os.environ.get('S3_BUCKET', None)
+API_TO_S3_ETL_BUCKET = os.environ.get('API_TO_S3_ETL_BUCKET', None)
 NEWS_API_KEY = os.environ.get('NEWS_API_KEY', None)
 
 news_api = NewsApiClient(NEWS_API_KEY)
@@ -59,7 +59,7 @@ transform_headlines_task = PythonOperator(task_id='transform_headlines',
 df_to_s3_task = PythonOperator(task_id='df_to_s3',
                                python_callable=df_to_s3,
                                provide_context=True,
-                               op_kwargs={'bucket_name': S3_BUCKET},
+                               op_kwargs={'bucket_name': API_TO_S3_ETL_BUCKET},
                                dag=dag)
 
 end = DummyOperator(task_id='end', dag=dag)

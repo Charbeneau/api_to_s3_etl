@@ -38,7 +38,7 @@ prefect backend server
 prefect server start
 ```
 
-3. Open a new terminal, hop in the prefect_env virtual environment, and start the Prefect Agent.
+3. Open a new terminal, enter the prefect_env virtual environment, and start the Prefect Agent.
 ```
 prefect agent start
 ```
@@ -52,4 +52,10 @@ prefect agent start
 python src/flows/api_to_s3_etl_flow.py
 ```
 
-7. Go back to the UI, and click "QUICK RUN" in the upper right.
+7. Go back to the UI, make sure you're in the 'APItoS3ETL" project, and click on the 'api_to_s3_etl_flow' flow.
+
+When you do, you should see a 'QUICK RUN' icon next to a blue rocket ship in the upper right corner.  
+
+Click 'QUICK RUN'.
+
+8. If everything worked, you'll see the Flow running and be able to click on each of its Tasks and view their logs.
