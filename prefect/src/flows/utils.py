@@ -135,6 +135,37 @@ def transform_headlines_task(top_headlines):
     return df
 
 
+def transform_headlines_task_for_unit_test(top_headlines):
+    '''Transforms NewsAPI top headlines
+    data appropriately.
+
+    Parameters
+    ----------
+    top_headlines:  (list)
+                    [{'source': {'id': 'news-com-au', 'name': 'News.com.au'},
+                      'author': 'https://www.news.com.au/...',
+                      'title': 'Coronavirus Australia...:',
+                      'description': 'Victorian students...',
+                      'url': 'https://www.news.com.au/...',
+                      'urlToImage': 'https://content.api.news/...',
+                      'publishedAt': '2020-05-12T00:06:17Z',
+                      'content': 'Victorian students will...'}},
+                     ...]
+    Returns
+    -------
+    df:             (pandas.DataFrame)
+                    DataFrame with columns 'source_id', 'source_name',..., 'content'  # noqa: E501
+    '''
+
+    print('Transforming headlines.')
+    df = pd.DataFrame(top_headlines)
+    df['source_id'] = df['source'].apply(lambda row: row['id'])
+    df['source_name'] = df['source'].apply(lambda row: row['name'])
+    df = df[['source_id', 'source_name', 'author', 'title', 'description',
+             'url', 'urlToImage', 'publishedAt', 'content']]
+    return df
+
+
 @task(log_stdout=True)
 def df_to_s3_task(bucket_name, sources, df):
     '''Put a DataFrame to S3 as a csv.
