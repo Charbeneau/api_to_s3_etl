@@ -10,7 +10,7 @@ from prefect import Flow
 from newsapi import NewsApiClient
 
 
-S3_BUCKET = os.environ.get('S3_BUCKET', None)
+API_TO_S3_ETL_BUCKET = os.environ.get('API_TO_S3_ETL_BUCKET', None)
 NEWS_API_KEY = os.environ.get('NEWS_API_KEY', None)
 LANGUAGE = 'en'
 
@@ -23,7 +23,7 @@ with Flow('api_to_s3_etl_flow') as flow:
     top_headlines = get_top_headlines_task(language=LANGUAGE, news_api=news_api,
                                            sources=sources)
     df = transform_headlines_task(top_headlines=top_headlines)
-    df_to_s3_task(bucket_name=S3_BUCKET, sources=sources, df=df)
+    df_to_s3_task(bucket_name=API_TO_S3_ETL_BUCKET, sources=sources, df=df)
 
 
 if __name__ == '__main__':

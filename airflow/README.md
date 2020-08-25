@@ -20,7 +20,7 @@ The [DAG](./src/dags/api_to_s3_etl_dag.py) hits an [API](https://newsapi.org/), 
   - AWS_ACCESS_KEY_ID
   - AWS_SECRET_ACCESS_KEY
   - NEWS_API_KEY
-  - S3_BUCKET
+  - API_TO_S3_ETL_BUCKET
 
 # Usage
 

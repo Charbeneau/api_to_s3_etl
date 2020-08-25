@@ -1,8 +1,8 @@
-from dags.utils import transform_headlines_for_unit_test
+from src.flows.utils import transform_headlines_task_for_unit_test
 import pandas as pd
 
 
-def test_transform_headlines_for_unit_test():
+def test_transform_headlines_task_for_unit_test():
     data = [{'source': {'id': 'news-com-au', 'name': 'News.com.au'},
              'author': 'https://www.news.com.au/...',
              'title': 'Coronavirus Australia...:',
@@ -20,7 +20,7 @@ def test_transform_headlines_for_unit_test():
              'publishedAt': '2020-05-12T00:06:17Z',
              'content': 'US students will...'}]
 
-    observed = transform_headlines_for_unit_test(top_headlines=data)
+    observed = transform_headlines_task_for_unit_test(top_headlines=data)
     expected = pd.DataFrame({'source_id': ['news-com-au', 'news-com'],
                              'source_name': ['News.com.au', 'News.com'],
                              'author': ['https://www.news.com.au/...', 'https://www.news.com/...'],  # noqa: E501
