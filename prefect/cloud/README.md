@@ -21,6 +21,7 @@ The [Flow](./src/flows/api_to_s3_etl_flow.py) hits an [API](https://newsapi.org/
   - PREFECT_CLOUD_TOKEN
     - See [here](https://cloud.prefect.io/user/tokens)
   - PREFECT_CLOUD_RUNNER_TOKEN
+    - See [here](https://docs.prefect.io/orchestration/concepts/tokens.html#token-types)
 
 # Usage
 
