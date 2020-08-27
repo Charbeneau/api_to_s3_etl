@@ -28,4 +28,3 @@ with Flow('api_to_s3_etl_flow') as flow:
 
 if __name__ == '__main__':
     flow.register(project_name='APItoS3ETL')
-    flow.run_agent()
