@@ -2,10 +2,11 @@
 
 This is the first thing I've done with [Prefect](https://www.prefect.io/).
 
+It uses [Prefect Server](https://docs.prefect.io/orchestration/server/overview.html#what-is-prefect-server) and runs localhost in Docker.
+
 The [Flow](./src/flows/api_to_s3_etl_flow.py) hits an [API](https://newsapi.org/), transforms the results, and puts them into [S3](https://aws.amazon.com/s3/).
 
 # Requirements
-
 - Python 3
   - This was written using version 3.7.6 [Clang 10.0.0 (clang-1000.11.45.5)] on darwin
 - [Docker](https://www.docker.com/products/docker-desktop)
@@ -20,7 +21,7 @@ The [Flow](./src/flows/api_to_s3_etl_flow.py) hits an [API](https://newsapi.org/
   - NEWS_API_KEY
   - API_TO_S3_ETL_BUCKET
 
-## Usage
+# Usage
 
 0. Create a Python virtual environment, here called **prefect_env** and done with [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
 ```
