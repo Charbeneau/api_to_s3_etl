@@ -9,6 +9,7 @@ The [Flow](./src/flows/api_to_s3_etl_flow.py) hits an [API](https://newsapi.org/
 # Requirements
 
 - Prefect Cloud 'Developer' access.
+  - Sign up [here](https://cloud.prefect.io/)
 - Python 3
   - This was written using version 3.7.6 [Clang 10.0.0 (clang-1000.11.45.5)] on darwin
 - [NewsAPI access](https://newsapi.org/docs/get-started)  
