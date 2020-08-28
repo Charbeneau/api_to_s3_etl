@@ -13,4 +13,4 @@ Airflow: [airflow](./airflow)
 
 Prefect Cloud: [prefect/cloud](./prefect/cloud)
 
-Prefect Server: prefect/server](./prefect/server)
+Prefect Server: [prefect/server](./prefect/server)
