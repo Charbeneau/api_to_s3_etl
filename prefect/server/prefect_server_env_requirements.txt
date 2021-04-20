@@ -28,7 +28,7 @@ pendulum==2.1.2
 pluggy==0.13.1
 prefect==0.13.3
 psutil==5.7.2
-py==1.9.0
+py==1.10.0
 pyparsing==2.4.7
 pytest==5.4.2
 python-box==4.2.3
