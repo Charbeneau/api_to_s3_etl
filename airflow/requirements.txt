@@ -71,7 +71,7 @@ newsapi-python==0.2.6
 numpy==1.18.4
 packaging==20.3
 pandas==0.25.3
-paramiko==2.7.1
+paramiko==2.10.1
 pendulum==1.4.4
 pluggy==0.13.1
 prison==0.1.3
