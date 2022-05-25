@@ -82,7 +82,7 @@ pyasn1==0.4.8
 pycparser==2.20
 Pygments==2.6.1
 PyHive==0.6.2
-PyJWT==1.7.1
+PyJWT==2.4.0
 PyNaCl==1.4.0
 pyOpenSSL==19.1.0
 pyparsing==2.4.7
